@@ -1,5 +1,8 @@
 <template>
   <div class="users container">
+      <div :class="{active: isActive}" class="alert-user-selected">
+          {{ alertMssgSelected }}
+      </div>
       <search-users @busqueda="search = $event"></search-users>
       <div class="search-counter" v-bind:search="search" v-if="search != 0 && searchUser.length != 0">
           <h3>We found: <span class="c-green">{{searchUser.length}}</span> results</h3>
@@ -41,7 +44,9 @@ export default {
             users: [],
             search: '',
             noresultsMssg: 'No hay reulstados para',
-            usersSelected: []
+            usersSelected: [],
+            alertMssgSelected: 'is added to you contacts!',
+            isActive: false
         }
     },
     created() {
@@ -61,7 +66,11 @@ export default {
             this.$emit('saveUsers', this.userSelected);
         },
         addUser(index, user){
-            this.usersSelected.splice(index, 0, user);
+            this.isActive = true;
+            setTimeout(() => {
+                this.isActive = false;
+            }, 2500);
+            this.usersSelected.splice(index, 1, user);
             console.log(this.usersSelected);
             this.$emit('passUsers', this.usersSelected);
         }
@@ -79,6 +88,38 @@ export default {
 </script>
 
 <style lang="scss">
+.alert-user-selected{
+    position: fixed;
+    bottom: 0;
+    transform: translateY(100%);
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 20px 0;
+    background-color: $darkBlue;
+    color: $white;
+    &.active{
+       /* top: inherit;
+        bottom: 0; */
+        animation: fade-up 2.5s ease-in-out 1;
+        
+    }
+
+}
+@keyframes fade-up{
+    0%{
+        transform: translateY(100%);
+    }
+    25%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
 .search-counter{
     text-align: center;
     display: block;
