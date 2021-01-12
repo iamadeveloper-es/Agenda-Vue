@@ -1,0 +1,9 @@
+input[type="text"]{
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid $mediumGrey;
+    @include marginAuto;
+    margin-bottom: 30px;
+    padding: 5px 0px;
+  }

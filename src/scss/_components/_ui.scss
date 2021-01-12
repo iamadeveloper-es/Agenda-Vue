@@ -1,0 +1,22 @@
+.btn--custom {
+    cursor: pointer;
+    padding: 14px 28px;
+    border-radius: 5px;
+    border: none;
+    display: inline-block;
+    &.white{
+        background-color: $white;
+        color: $darkBlue;
+    }
+    &.blue {
+        background-color: $darkBlue;
+        color: $white;
+    }
+    &.shadow{
+        box-shadow: $boxShadow;
+    }
+
+}
+.ico{
+    font-size: 32px;
+}
