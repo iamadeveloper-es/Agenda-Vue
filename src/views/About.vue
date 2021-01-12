@@ -2,10 +2,10 @@
   <div class="about">
     <h1>About me / About this project</h1>
     <div class="flex-container container">
-      <div class="flex-item img-container">
+      <div class="flex-item-about img-container">
         <img :src="img" alt="Daniel Verdú Martínez">
       </div>
-      <div class="flex-item">
+      <div class="flex-item-about">
         <p>Hola!!<br> Mi nombre es Daniel Verdú Martínez y soy Desarrollador FrontEnd.</p>
         <p>Disfruto muchísimo creando diferentes proyectos personales como este en el que puedo dejar volar mi imaginación, en este caso con la "excusa" de querer para este 2021 tener un alto conocimiento sobre VueJS</p>
         <h3>Sobre el proyecto: </h3>
@@ -36,16 +36,26 @@ export default {
     text-align: left;
   }
 }
-.flex-item{
-  width: 50%;
+.flex-container{
+  flex-direction: column;
+}
+.flex-item-about{
+  width: 100%;
   display: block;
 }
 .img-container{
   margin-right: 0px;
-  width: 40%;
   img{
     width: 100%;
     max-width: 450px;
   }
 }
+@media screen and(min-width: 1140px){
+    .flex-container{
+      flex-direction: row;
+    }
+    .flex-item-about{
+      width: 50%;
+    }
+  }
 </style>

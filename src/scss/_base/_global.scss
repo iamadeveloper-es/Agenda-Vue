@@ -20,6 +20,8 @@ body{
     width: 100%;
     max-width: 1440px;
     @include marginAuto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .d-block{
     display: block;

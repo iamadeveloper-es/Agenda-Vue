@@ -52,6 +52,9 @@ ul{
     padding: 15px;
     margin-bottom: 5px;
   }
+  .flex-container{
+        flex-direction: column;
+  }
   .flex-item{
     width: calc(100% / 3);
     margin: 0 10px;
@@ -74,6 +77,11 @@ ul{
   .user__info{
     .ico{
       margin-right: 15px;
+    }
+  }
+  @media screen and(min-width: 758px){
+    .flex-container{
+      flex-direction: row;
     }
   }
 </style>
