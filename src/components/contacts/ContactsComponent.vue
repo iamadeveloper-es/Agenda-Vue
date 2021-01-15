@@ -3,7 +3,7 @@
     <h1>Contacts</h1>
     <h2 v-if="addedUsers == undefined">Yo Don't have any contact yet!</h2>
     <div v-else>
-      <p>You actually have {{addedUsers.length}} contacts</p>
+      <p>You have {{addedUsers.length}} contacts</p>
     <ul>
       <li v-for="(user, index) in addedUsers" :key="index">
         <div class="contacts__user flex-container">
@@ -36,7 +36,7 @@ export default {
         }
     },
     created(){
-      this.addedUsers = this.users
+      this.addedUsers = [...new Set(this.users)];
     }
 
 }
@@ -56,7 +56,7 @@ ul{
         flex-direction: column;
   }
   .flex-item{
-    width: calc(100% / 3);
+    width: 100%;
     margin: 0 10px;
     display: flex;
     align-items: center;
@@ -82,6 +82,9 @@ ul{
   @media screen and(min-width: 758px){
     .flex-container{
       flex-direction: row;
+    }
+    .flex-item{
+      width: calc(100% / 3);
     }
   }
 </style>

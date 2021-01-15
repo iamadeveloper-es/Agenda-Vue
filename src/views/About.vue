@@ -7,9 +7,11 @@
       </div>
       <div class="flex-item-about">
         <p>Hola!!<br> Mi nombre es Daniel Verdú Martínez y soy Desarrollador FrontEnd.</p>
-        <p>Disfruto muchísimo creando diferentes proyectos personales como este en el que puedo dejar volar mi imaginación, en este caso con la "excusa" de querer para este 2021 tener un alto conocimiento sobre VueJS</p>
+        <p>Disfruto muchísimo creando diferentes proyectos personales como este, en el que puedo dejar volar mi imaginación, en este caso con la "excusa" de tener para este 2021 un alto conocimiento sobre VueJS.</p>
         <h3>Sobre el proyecto: </h3>
-        <p>Este es mi primer proyecto personal desarrollado con <span class="c-green">Vue-cli</span>, pero no el primero en el ambito laboral. En el quería plasmar el uso de diferentes componentes y la comunicación entre ellos utilizando las <span class="c-green">props</span>, los <span class="c-green">$events</span> o el paso de data a través de los <span class="c-green">$route.$params</span></p>
+        <p>No es la primera vez que me encuentro con <span class="c-green">Vue</span> en el ambito profesional, aunque si es mi primer proyecto personal. En el he querido testear por mi mismo el uso de diferentes componentes y la comunicación entre ellos utilizando las <span class="c-green">props</span>, los <span class="c-green">$events</span> o el paso de data a través de los <span class="c-green">$route.$params</span>.</p>
+        <p>Este es un pequeño proyecto pero el comienzo de algo grande!</p>
+        <p>Espero que lo disfrutes.</p>
       </div>
     </div>
   </div>

@@ -40,7 +40,8 @@ export default {
     },
     counter(){
       if(this.usuarios.length > 0){
-        return this.usuarios.length
+        let realUsers = [...new Set(this.usuarios)];
+        return realUsers.length
       }
     }
   },

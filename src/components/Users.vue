@@ -70,9 +70,10 @@ export default {
             setTimeout(() => {
                 this.isActive = false;
             }, 2500);
-            this.usersSelected.splice(index, 1, user);
+            this.usersSelected.push(user)
             console.log(this.usersSelected);
             this.$emit('passUsers', this.usersSelected);
+            
         }
     },
     computed: {
